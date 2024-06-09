@@ -5,9 +5,8 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150vh;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
@@ -16,6 +15,7 @@ body {
     text-align: center;
     margin: auto;
     margin-top: 20px;
+    flex: 1; /* Allows the container to grow and take available space */
 }
 
 .header {
@@ -28,7 +28,7 @@ body {
 
 .header .logo {
     margin-right: 20px;
-    height: 180px; /* Dimensione del logo, regolabile */
+    height: 50px; /* Dimensione del logo, regolabile */
 }
 
 .main-content {
@@ -193,6 +193,7 @@ textarea {
     border-radius: 5px;
     margin-top: 5px;
 }
+
 footer {
     width: 100%;
     text-align: center;
@@ -213,15 +214,9 @@ footer a:hover {
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
-    body {
-        justify-content: flex-start; /* Align at the top for scrolling */
-        height: auto; /* Adjust height to auto for mobile */
-    }
-
     .header {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
     }
 
     .main-content {
@@ -229,19 +224,14 @@ footer a:hover {
         align-items: center;
     }
 
-    .banner-vertical {
-        width: 100%;
-        margin: 10px 0;
-    }
-
     .content-wrapper {
         width: 100%;
         margin: 0;
     }
 
-    .banner-horizontal {
+    .banner-vertical {
         width: 100%;
-        margin-bottom: 20px;
+        margin: 10px 0;
     }
 
     .title-controls {
@@ -265,7 +255,7 @@ footer a:hover {
     }
 
     textarea {
-        width: 80%;
+        width: 100%;
         margin-bottom: 20px;
     }
 
