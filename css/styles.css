@@ -28,7 +28,7 @@ body {
 
 .header .logo {
     margin-right: 20px;
-    height: 50px; /* Dimensione del logo, regolabile */
+    height: 250px; /* Dimensione del logo, regolabile */
 }
 
 .main-content {
