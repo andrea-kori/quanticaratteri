@@ -281,3 +281,21 @@ textarea {
         font-size: 0.9em;
     }
 }
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f0f0f0;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
