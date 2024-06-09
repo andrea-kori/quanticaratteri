@@ -6,8 +6,9 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Align at the top for scrolling */
     height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .container {
@@ -44,14 +45,6 @@ body {
     padding: 10px;
     text-align: center;
     margin: 10px 0;
-}
-
-.left-banner {
-    order: -1;
-}
-
-.right-banner {
-    order: 1;
 }
 
 .content-wrapper {
@@ -111,6 +104,8 @@ textarea {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .text-controls button {
@@ -141,7 +136,8 @@ textarea {
 .bottom-stats {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     text-align: left;
     font-size: 0.9em;
 }
@@ -149,6 +145,7 @@ textarea {
 .bottom-stats .stats-column {
     width: 100%;
     padding: 10px 0;
+    margin-bottom: 10px;
 }
 
 .bottom-stats h2 {
