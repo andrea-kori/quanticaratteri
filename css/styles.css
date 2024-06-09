@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Sfondo grigio chiaro */
+    color: #333333; /* Testo blu scuro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1700px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+margin-top: 30px;
+
+}
+
+.header .logo {
+    margin-right: 20px;
+    height: 50px; /* Dimensione del logo, regolabile */
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.banner-vertical {
+    width: 120px;
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+    margin: 0 10px;
+    flex-shrink: 0;
+}
+
+.left-banner {
+    order: -1;
+}
+
+.right-banner {
+    order: 1;
+}
+
+.content-wrapper {
+    width: calc(100% - 380px);
+    margin: 0 20px;
+}
+
+.site-description {
+    margin-bottom: 20px;
+}
+
+.banner-horizontal {
+    width: 100%;
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+margin-bottom: 20px;
+margin-top: 20px;
+    font-size: 2em;
+    color: #333333;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: calc(120% - 500px); /* Allinea il lato sinistro del riquadro di testo con l'inizio della parola "Conta caratteri" */
+    height: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    background-color: #ffffff;
+    color: #333333;
+    margin-right: 20px;
+}
+
+.text-controls {
+    display: flex;
+    gap: 20px;
+margin: 0 auto;
+}
+
+.text-controls button {
+    font-size: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.side-stats {
+    text-align: left;
+    font-size: 1.2em;
+    width: 250px; /* Definisce una larghezza fissa per allineare meglio */
+}
+
+.side-stats p {
+    margin: 5px 0;
+}
+
+.side-stats p strong {
+    font-weight: bold;
+}
+
+.bottom-stats {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.bottom-stats .stats-column {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.bottom-stats h2 {
+    margin: 10px 0 5px;
+}
+
+.letter-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.letter-row span {
+    flex: 1;
+    text-align: left;
+}
+/* Accordo */
+.accordion {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2em;
+    transition: 0.4s;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.accordion:hover,
+.accordion:active {
+    background-color: #0056b3;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}

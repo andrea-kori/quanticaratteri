@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Analyzer - Conta Caratteri e Parole</title>
+    <meta name="description" content="Utilizza il nostro strumento di analisi del testo per contare caratteri, parole, frasi e paragrafi. Perfetto per scrittori, studenti e professionisti.">
+    <meta name="keywords" content="conta caratteri, conta lettere, quante parole, analisi del testo, conteggio caratteri, conteggio parole">
+    <meta name="author" content="Il tuo nome">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="path/to/logo.png" alt="Logo del Sito" class="logo">
+            <p>testo test testo testo testo</p>
+        </div>
+        <div class="main-content">
+            <div class="banner-vertical left-banner">
+                <!-- Spazio per banner pubblicitario verticale sinistro -->
+                <p>Banner Pubblicitario</p>
+            </div>
+            <div class="content-wrapper">
+                <div class="banner-horizontal">
+                    <!-- Spazio per banner pubblicitario orizzontale -->
+                    <p>Banner Pubblicitario</p>
+                </div>
+                <div class="title-controls">
+                    <h1>Conta caratteri</h1>
+                    <div class="text-controls">
+                        <button id="toUpperCase" title="Converti tutto il testo in maiuscolo">A</button>
+                        <button id="toLowerCase" title="Converti tutto il testo in minuscolo">a</button>
+                        <button id="capitalizeWords" title="Capitalizza ogni parola: Converte la prima lettera di ogni parola in maiuscolo.">C</button>
+                        <button id="reverseText" title="Inverti il testo: Inverte l'ordine dei caratteri nel testo.">I</button>
+                        <button id="removeExtraSpaces" title="Rimuovi spazi extra: Rimuove spazi extra tra le parole.">R</button>
+                        <button id="removePunctuation" title="Rimuovi punteggiatura: Rimuove tutti i segni di punteggiatura dal testo.">P</button>
+                        <button id="generateLorem" title="Genera testo casuale">Casual</button>
+                    </div>
+                </div>
+                <div class="content">
+                    <textarea id="textInput" placeholder="Scrivi o incolla qui il testo"></textarea>
+                    <div class="side-stats">
+                        <p><strong>Caratteri:</strong> <span id="charCount">0</span></p>
+                        <p><strong>Caratteri (spazi esclusi):</strong> <span id="charCountNoSpaces">0</span></p>
+                        <p><strong>Numero di spazi:</strong> <span id="spaceCount">0</span></p>
+                        <p><strong>Caratteri speciali:</strong> <span id="specialCharCount">0</span></p>
+                        <p><strong>Parole:</strong> <span id="wordCount">0</span></p>
+                        <p><strong>Frasi:</strong> <span id="sentenceCount">0</span></p>
+                        <p><strong>Paragrafi:</strong> <span id="paragraphCount">0</span></p>
+                        <p><strong>Tempo di lettura:</strong> <span id="readingTime">0 sec</span></p>
+                        <p><strong>Tempo nel parlato:</strong> <span id="speakingTime">0 sec</span></p>
+                    </div>
+                </div>
+                <div class="bottom-stats">
+                    <div class="stats-column">
+                        <button class="accordion">Ricorrenza lettere</button>
+                        <div class="panel">
+                            <div id="letterFrequency">
+                                <div class="letter-row"><span>A: 0</span><span>F: 0</span><span>M: 0</span></div>
+                                <div class="letter-row"><span>B: 0</span><span>G: 0</span><span>N: 0</span></div>
+                                <div class="letter-row"><span>C: 0</span><span>H: 0</span><span>O: 0</span></div>
+                                <div class="letter-row"><span>D: 0</span><span>I: 0</span><span>P: 0</span></div>
+                                <div class="letter-row"><span>E: 0</span><span>L: 0</span><span>Q: 0</span></div>
+                                <div class="letter-row"><span>R: 0</span><span>S: 0</span><span>T: 0</span></div>
+                                <div class="letter-row"><span>U: 0</span><span>V: 0</span><span>W: 0</span></div>
+                                <div class="letter-row"><span>X: 0</span><span>Y: 0</span><span>Z: 0</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats-column">
+                        <button class="accordion">Top 5 lettere ricorrenti</button>
+                        <div class="panel">
+                            <p id="topLetter1">lettera1: 0</p>
+                            <p id="topLetter2">lettera2: 0</p>
+                            <p id="topLetter3">lettera3: 0</p>
+                            <p id="topLetter4">lettera4: 0</p>
+                            <p id="topLetter5">lettera5: 0</p>
+                        </div>
+                    </div>
+                    <div class="stats-column">
+                        <button class="accordion">Top 5 parole più ricorrenti</button>
+                        <div class="panel">
+                            <p id="topWord1">parola1: 0</p>
+                            <p id="topWord2">parola2: 0</p>
+                            <p id="topWord3">parola3: 0</p>
+                            <p id="topWord4">parola4: 0</p>
+                            <p id="topWord5">parola5: 0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-vertical right-banner">
+                <!-- Spazio per banner pubblicitario verticale destro -->
+                <p>Banner Pubblicitario</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
