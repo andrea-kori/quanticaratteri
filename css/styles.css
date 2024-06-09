@@ -193,6 +193,23 @@ textarea {
     border-radius: 5px;
     margin-top: 5px;
 }
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f0f0f0;
+    position: relative; /* Ensure it stays within the flow of the document */
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
@@ -280,22 +297,4 @@ textarea {
     .panel {
         font-size: 0.9em;
     }
-}
-footer {
-    width: 100%;
-    position: absolute;
-    bottom: -300px;
-    text-align: center;
-    padding: 10px 0;
-    background-color: #f0f0f0;
-}
-
-footer a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
