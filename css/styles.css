@@ -6,50 +6,58 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align at the top for scrolling */
-    height: 100vh;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    align-items: center;
+    height: 150vh;
 }
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1700px;
     text-align: center;
     margin: auto;
-    padding: 20px;
+    margin-top: 20px;
 }
 
 .header {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .header .logo {
-    margin-bottom: 10px;
+    margin-right: 20px;
     height: 50px; /* Dimensione del logo, regolabile */
 }
 
 .main-content {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    width: 100%;
 }
 
 .banner-vertical {
-    width: 100%;
+    width: 120px;
     background-color: #ddd;
     padding: 10px;
     text-align: center;
-    margin: 10px 0;
+    margin: 0 10px;
+    flex-shrink: 0;
+}
+
+.left-banner {
+    order: -1;
+}
+
+.right-banner {
+    order: 1;
 }
 
 .content-wrapper {
-    width: 100%;
-    margin: 0;
+    width: calc(100% - 380px);
+    margin: 0 20px;
 }
 
 .site-description {
@@ -66,8 +74,7 @@ body {
 
 .title-controls {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
@@ -75,20 +82,20 @@ body {
 h1 {
     margin: 0;
     margin-bottom: 20px;
+    margin-top: 20px;
     font-size: 2em;
     color: #333333;
 }
 
 .content {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 20px;
 }
 
 textarea {
-    width: 100%;
+    width: calc(120% - 500px); /* Allinea il lato sinistro del riquadro di testo con l'inizio della parola "Conta caratteri" */
     height: 300px;
     padding: 10px;
     font-size: 16px;
@@ -97,15 +104,13 @@ textarea {
     resize: none;
     background-color: #ffffff;
     color: #333333;
-    margin-bottom: 20px;
+    margin-right: 20px;
 }
 
 .text-controls {
     display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
 }
 
 .text-controls button {
@@ -121,8 +126,7 @@ textarea {
 .side-stats {
     text-align: left;
     font-size: 1.2em;
-    width: 100%;
-    margin-bottom: 20px;
+    width: 250px; /* Definisce una larghezza fissa per allineare meglio */
 }
 
 .side-stats p {
@@ -135,17 +139,14 @@ textarea {
 
 .bottom-stats {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     text-align: left;
     font-size: 0.9em;
 }
 
 .bottom-stats .stats-column {
-    width: 100%;
-    padding: 10px 0;
-    margin-bottom: 10px;
+    flex: 1;
+    padding: 0 10px;
 }
 
 .bottom-stats h2 {
@@ -195,9 +196,35 @@ textarea {
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
+    body {
+        justify-content: flex-start; /* Align at the top for scrolling */
+        height: auto; /* Adjust height to auto for mobile */
+    }
+
     .header {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner-vertical {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .content-wrapper {
+        width: 100%;
+        margin: 0;
+    }
+
+    .banner-horizontal {
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .title-controls {
@@ -205,21 +232,25 @@ textarea {
         align-items: center;
     }
 
+    .text-controls {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .text-controls button {
+        font-size: 15px;
+        padding: 3px 6px;
+    }
+
     .content {
         flex-direction: column;
         align-items: center;
     }
 
-    .text-controls {
-        flex-direction: row;
-        align-items: center;
+    textarea {
+        width: 100%;
+        margin-bottom: 20px;
     }
-    
-    .text-controls button {
-    font-size: 15px;
-    padding: 3px 6px;
-
-}
 
     .bottom-stats {
         flex-direction: column;
@@ -229,5 +260,24 @@ textarea {
     .bottom-stats .stats-column {
         width: 100%;
         padding: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .text-controls button {
+        font-size: 12px;
+        padding: 2px 4px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .accordion {
+        font-size: 1em;
+    }
+
+    .panel {
+        font-size: 0.9em;
     }
 }
